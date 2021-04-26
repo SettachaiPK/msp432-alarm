@@ -49,5 +49,5 @@ void loop () {
 //    lcd.print(now.minute(), DEC);
 //    lcd.print(":");
 //    lcd.print(now.second(), DEC);
-    delay(1000);
+    delay(5000);
 }
