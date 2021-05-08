@@ -14,7 +14,7 @@ void setup () {
   //  delay(3000);
   //  lcd.clear();
   rtc.begin();
-  //  rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+  // rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   Serial.begin(9600);
 }
 
@@ -23,6 +23,8 @@ void loop () {
     DateTime now = rtc.now();
 //    lcd.clear();
 //    lcd.setCursor(3,0);
+
+    Serial.print(now(),BIN);
     Serial.print(now.day(), DEC);
     Serial.print('/');
     Serial.print(now.month(), DEC);
@@ -35,7 +37,7 @@ void loop () {
     Serial.print(':');
     Serial.print(now.minute(), DEC);
     Serial.print(':');
-    Serial.print(now.second(), DEC);
+    Serial.println(now.second(), DEC);
 //    lcd.print(now.day(), DEC);
 //    lcd.print("/");
 //    lcd.print(now.month(), DEC);
